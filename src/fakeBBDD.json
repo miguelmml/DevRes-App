@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Algoritmos-1",
+    "description": "Algoritmos comunes en entrevistas.",
+    "url": "http://www.thatjsdude.com/interview/js1.html",
+    "categories":["entrevistas"]
+  },
+  {
+    "id": 2,
+    "title": "Can I Use",
+    "description": "Cosas que pueden soportar los navegadores.",
+    "url": "https://caniuse.com/",
+    "categories":["herramientas", "compatibilidad"]
+  },
+  {
+    "id": 2,
+    "title": "Ecosia",
+    "description": "Navegador que planta arboles!",
+    "url": "https://www.ecosia.org/",
+    "categories":["navegador", "ecologia"]
+  }
+]
