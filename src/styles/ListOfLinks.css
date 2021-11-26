@@ -1,0 +1,24 @@
+.listOfLinks {
+  color: #fff;
+  background-color: rgb(25, 21, 49);
+}
+
+.listOfLinksItem {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid black;
+  margin: 1%;
+  padding: 1%;
+  list-style-type: none;
+}
+
+.listOfLinksItem > a {
+  color: rgb(25, 21, 49);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.listOfLinksItem > p {
+  display: inline-block;
+  margin-left: 1%;
+}

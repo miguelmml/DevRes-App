@@ -1,12 +1,17 @@
+import { Fragment } from 'react'
+import ListOfLinks from './ListOfLinks'
+import Header from './Header'
+import * as data from '../bbdd.json'
 import '../styles/App.css'
+
+let linksData = data.default
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{'< Dev-Res >'}</h1>
-      </header>
-    </div>
+    <>
+      <Header />
+      <ListOfLinks data={linksData} />
+    </>
   )
 }
 
