@@ -1,5 +1,4 @@
 export function getData() {
-  //TODO: añadir un valor por defecto para cuando se haga una primera carga en la que todavia no hay nada en local storage.
   let data = []
 
   for (let i in localStorage) {
@@ -8,11 +7,13 @@ export function getData() {
     }
   }
 
+  if (data.length === 0) {
+    data.push({ id: 'dbEmpty' })
+  }
   return data
 }
 
 export function setDataItem([...args]) {
-  console.log(args)
   args.forEach((item) => {
     localStorage.setItem(item.id, JSON.stringify(item))
   })

@@ -1,18 +1,17 @@
 import { Fragment } from 'react'
-import { AddButtonInterfaceProvider } from '../contexts/AddButtonInterfaceContext'
-import { ListOfLinksContextProvider } from '../contexts/ListOfLinksContext'
-import MainContent from './MainContent'
 import Header from './Header'
+import MainContent from './MainContent'
+import { ListOfLinksContextProvider, AddEditResourcesContextProvider } from '../contexts/mainContext.js'
 import '../styles/App.css'
 
 function App() {
   return (
     <Fragment>
       <ListOfLinksContextProvider>
-        <AddButtonInterfaceProvider>
+        <AddEditResourcesContextProvider>
           <Header />
           <MainContent />
-        </AddButtonInterfaceProvider>
+        </AddEditResourcesContextProvider>
       </ListOfLinksContextProvider>
     </Fragment>
   )

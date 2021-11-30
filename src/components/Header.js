@@ -1,30 +1,31 @@
 import { useContext } from 'react'
-import AddButtonInterfacecontext from '../contexts/AddButtonInterfaceContext'
-import AddButtonInterface from './AddButtonInterface'
+import AddEditInterface from './AddEditInterface'
+import { addEditResourcesContext } from '../contexts/mainContext'
+import infoMessage from '../helpers/infoMessage'
+import cleanForm from '../helpers/cleanFrom'
 import '../styles/Header.css'
 
 export default function Header() {
-  const { buttonInterface, setButtonInterface } = useContext(
-    AddButtonInterfacecontext
-  )
+  const { addEditInterface, toggleAddEditInterface } = useContext(addEditResourcesContext)
 
   return (
     <header className="appHeader">
-      <h1>Titulo/Logo</h1>
-      <input
-        type="text"
-        placeholder="Filter..."
-        id="filterBox"
-        className="filterBox"
-      />
+      <h1 className="appHeader__h1">Titulo/Logo</h1>
+      <input id="filterBox" className="appHeader__filterBox" type="text" placeholder="Filter..." />
       <button
         id="addButton"
-        className="addButton"
-        onClick={() => setButtonInterface(!buttonInterface)}
+        className="appHeader__addButton"
+        onClick={() => {
+          toggleAddEditInterface(true)
+          setTimeout(() => {
+            infoMessage('Add new resource')
+            cleanForm()
+          }, 0) //TODO: hacerlo con promesas
+        }}
       >
         Add +
       </button>
-      <AddButtonInterface value={buttonInterface} />
+      <AddEditInterface value={addEditInterface} />
     </header>
   )
 }

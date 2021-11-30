@@ -1,6 +1,6 @@
-import ListOfLinks from './ListOfLinks'
 import { useContext } from 'react'
-import listOfLinksContext from '../contexts/ListOfLinksContext'
+import ListOfLinks from './ListOfLinks'
+import { listOfLinksContext } from '../contexts/mainContext'
 
 export default function MainContent() {
   const { listOfLinks } = useContext(listOfLinksContext)

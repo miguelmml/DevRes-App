@@ -2,23 +2,16 @@ import { uuid } from 'uuidv4'
 
 export function getFormData() {
   const data = {
-    id: document.getElementById('addButtonInterface__id').value
-      ? document.getElementById('addButtonInterface__id').value
+    id: document.getElementById('addEditInterfaceId').value
+      ? document.getElementById('addEditInterfaceId').value
       : uuid(),
-    title: document.getElementById('addButtonInterface__title').value + ':',
-    description: document.getElementById('addButtonInterface__description')
-      .value,
-    url: document.getElementById('addButtonInterface__url').value,
+    title: document.getElementById('addEditInterfaceTitle').value + ':',
+    description: document.getElementById('addEditInterfaceDescription').value,
+    url: document.getElementById('addEditInterfaceUrl').value,
   }
 
-  console.log('getfromdata >> ', data)
-
-  if (
-    data.id !== '' &&
-    data.title !== '' &&
-    data.description !== '' &&
-    data.url !== ''
-  ) {
+  //TODO: hacer una validacion de los campos mas especifica
+  if (data.id !== '' && data.title !== '' && data.description !== '' && data.url !== '') {
     return data
   } else {
     return false
