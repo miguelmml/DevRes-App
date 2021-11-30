@@ -1,17 +1,20 @@
 import { Fragment } from 'react'
-import ListOfLinks from './ListOfLinks'
+import { AddButtonInterfaceProvider } from '../contexts/AddButtonInterfaceContext'
+import { ListOfLinksContextProvider } from '../contexts/ListOfLinksContext'
+import MainContent from './MainContent'
 import Header from './Header'
-import * as data from '../bbdd.json'
 import '../styles/App.css'
-
-let linksData = data.default
 
 function App() {
   return (
-    <>
-      <Header />
-      <ListOfLinks data={linksData} />
-    </>
+    <Fragment>
+      <ListOfLinksContextProvider>
+        <AddButtonInterfaceProvider>
+          <Header />
+          <MainContent />
+        </AddButtonInterfaceProvider>
+      </ListOfLinksContextProvider>
+    </Fragment>
   )
 }
 
