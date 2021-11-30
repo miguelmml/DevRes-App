@@ -1,3 +1,5 @@
+import sortData from './sortData'
+
 export function getData() {
   let data = []
 
@@ -10,7 +12,8 @@ export function getData() {
   if (data.length === 0) {
     data.push({ id: 'dbEmpty' })
   }
-  return data
+
+  return sortData(data)
 }
 
 export function setDataItem([...args]) {
