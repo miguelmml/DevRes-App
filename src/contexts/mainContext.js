@@ -5,9 +5,12 @@ export const listOfLinksContext = React.createContext({})
 
 export function ListOfLinksContextProvider({ children }) {
   const [listOfLinks, setListOfLinks] = useState(getData())
+  const [filterListOfLinks, setFilterListOfLinks] = useState(undefined)
 
   return (
-    <listOfLinksContext.Provider value={{ listOfLinks, setListOfLinks }}>
+    <listOfLinksContext.Provider
+      value={{ listOfLinks, setListOfLinks, filterListOfLinks, setFilterListOfLinks }}
+    >
       {children}
     </listOfLinksContext.Provider>
   )

@@ -8,6 +8,8 @@ export default function ListOfLink(props) {
   const { setListOfLinks } = useContext(listOfLinksContext)
   const { toggleAddEditInterface } = useContext(addEditResourcesContext)
 
+  console.log('listOfLinks rendering..')
+
   return (
     <ul
       className="listOfLinks"
@@ -32,16 +34,21 @@ export default function ListOfLink(props) {
           return <li className="noItems">Add your first resource</li>
         }
 
-        return (
-          <li className="listOfLinksItem" id={element.id} key={element.id}>
-            <a href={element.url} target="_blank" rel="noreferrer">
-              {element.title}
-            </a>
-            <p>{element.description}</p>
-            <button className="listOfLinksItem__editButton">✏</button>
-            <button className="listOfLinksItem__deleteButton">❌</button>
-          </li>
-        )
+        let regExp = new RegExp(props.filter, 'i')
+
+        if (regExp.test(element.title) || regExp.test(element.description)) {
+          return (
+            <li className="listOfLinksItem" id={element.id} key={element.id}>
+              <a href={element.url} target="_blank" rel="noreferrer">
+                {element.title}
+              </a>
+              <p>{element.description}</p>
+              <button className="listOfLinksItem__editButton">✏</button>
+              <button className="listOfLinksItem__deleteButton">❌</button>
+            </li>
+          )
+        }
+        return null
       })}
     </ul>
   )
