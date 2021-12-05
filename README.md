@@ -4,7 +4,7 @@ Little project to centralize web resources (articles, tools, games...)
 
 ---
 
-(img)
+![Sin titulo](https://github.com/miguelmml/DevRes-App/blob/master/images/appScreenshot.png)
 
 ## About app
 
