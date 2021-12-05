@@ -1,0 +1,80 @@
+.addEditInterface {
+  width: 40%;
+  min-width: 180px;
+  padding: 1em;
+  margin: 0 auto;
+  border: 3px solid var(--app-secondaryColour);
+  border-radius: 4px;
+}
+
+.addEditInterface__info {
+  font-size: 1.2em;
+  font-weight: bold;
+  width: fit-content;
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
+.addEditInterface__input {
+  font-size: 1rem;
+  display: block;
+  width: 70%;
+  font-weight: bold;
+  color: var(--app-secondaryColour);
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 0.2em 0.8em;
+  margin: 1em auto;
+  border: 2px solid var(--app-textColour);
+  border-radius: 6px;
+  outline: none;
+}
+.addEditInterface__input::placeholder {
+  color: #fff;
+}
+
+.addEditInterface__description {
+  max-width: 70%;
+  min-width: 70%;
+  resize: none;
+}
+
+.addEditInterface__buttonsWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.addEditInterface__submit,
+.addEditInterface__exit {
+  width: 11%;
+  height: fit-content;
+  padding: 0.2em;
+  font-size: 0.9em;
+  font-weight: bold;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.addEditInterface__exit {
+  margin-left: 1em;
+}
+
+.addEditInterface__exit--svg {
+  fill: none;
+  stroke: #eb427d;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+.addEditInterface__submit--svg {
+  fill: none;
+  stroke: #227461;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+.addEditInterface__submit--svg:hover,
+.addEditInterface__exit--svg:hover {
+  stroke: #cee4e2;
+}

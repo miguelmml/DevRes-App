@@ -1,24 +1,81 @@
 .listOfLinks {
+  font-size: 1rem;
   color: #fff;
-  background-color: rgb(25, 21, 49);
+  width: 75%;
+  margin: 1% auto;
+  padding: 2%;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
 }
 
 .listOfLinksItem {
-  color: #000;
-  background-color: #fff;
-  border: 1px solid black;
-  margin: 1%;
-  padding: 1%;
-  list-style-type: none;
+  background-color: #102724e1;
+  border: 2px solid #102724;
+  border-radius: 5px;
+  padding: 1em 4.2em 0.5em 1em;
+  position: relative;
 }
-
-.listOfLinksItem > a {
-  color: rgb(25, 21, 49);
+.listOfLinksItem__a {
+  font-size: 1em;
+  display: block;
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--app-primaryColour);
+  padding: 0.5em 1em;
+  border: 2px solid var(--app-primaryColour);
+  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
 }
+.listOfLinksItem__a:hover {
+  color: #cee4e2;
+  background-color: rgba(255, 255, 255, 0.25);
+}
 
-.listOfLinksItem > p {
-  display: inline-block;
-  margin-left: 1%;
+.listOfLinksItem__buttonsWrapper {
+  padding: 1%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.listOfLinksItem__buttons {
+  font-size: 1em;
+  width: 2.2em;
+  border: none;
+  padding: 1%;
+  position: absolute;
+  bottom: 0.1em;
+  right: 0.2em;
+  background-color: transparent;
+}
+.listOfLinksItem__buttons:hover .listOfLinksItem__buttons--svg {
+  stroke: #cee4e2;
+}
+.listOfLinksItem__editButton {
+  margin-right: 0.2em;
+  right: 2em;
+}
+.listOfLinksItem__buttons--svg {
+  fill: none;
+  stroke: var(--app-primaryColour);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.listOfLinks__noItems {
+  background-color: #102724e1;
+  border: 2px solid #102724;
+  border-radius: 5px;
+  padding: 1em 4.2em 0.5em 1em;
+  grid-column-start: span 2;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: center;
+  line-height: 4em;
 }

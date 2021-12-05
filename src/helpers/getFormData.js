@@ -5,7 +5,7 @@ export function getFormData() {
     id: document.getElementById('addEditInterfaceId').value
       ? document.getElementById('addEditInterfaceId').value
       : uuid(),
-    title: document.getElementById('addEditInterfaceTitle').value + ':',
+    title: document.getElementById('addEditInterfaceTitle').value,
     description: document.getElementById('addEditInterfaceDescription').value,
     url: document.getElementById('addEditInterfaceUrl').value,
   }

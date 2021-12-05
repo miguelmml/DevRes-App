@@ -12,7 +12,7 @@ function getItemData(event) {
 
   const data = {
     id: item.id,
-    title: item.firstChild.textContent.slice(0, item.firstChild.textContent.length - 1),
+    title: item.firstChild.textContent,
     description: item.children[1].textContent,
     url: item.firstChild.href,
   }
