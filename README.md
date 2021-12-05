@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Dev-Res
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Little project to centralize web resources (articles, tools, games...)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+(img)
+
+## About app
+
+Made with React and create-react-app
 
 ### `npm start`
 

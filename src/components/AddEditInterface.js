@@ -47,7 +47,7 @@ export default function AddEditInterface(props) {
               }
             }}
           >
-            <svg class="addEditInterface__submit--svg" viewBox="0 0 24 24">
+            <svg className="addEditInterface__submit--svg" viewBox="0 0 24 24">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </button>
@@ -58,7 +58,7 @@ export default function AddEditInterface(props) {
               toggleAddEditInterface(!addEditInterface)
             }}
           >
-            <svg class="addEditInterface__exit--svg" viewBox="0 0 24 24">
+            <svg className="addEditInterface__exit--svg" viewBox="0 0 24 24">
               <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </button>
